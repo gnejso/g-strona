@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt i Wycena | KOGUT ROBOTY ZIEMNE Giżycko</title>
+    <meta name="description" content="Skontaktuj się z Kogut Roboty Ziemne w Giżycku. Bezpłatna wycena. Tel: 692 598 742. Olsztyńska 10/26, 11-500 Giżycko.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .contact-info-block {
+            margin-bottom: 30px;
+        }
+        .contact-info-block h3 {
+            font-size: 1.1rem;
+            margin-bottom: 14px;
+            color: var(--navy);
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--orange);
+        }
+        .contact-info-block p {
+            font-size: 0.95rem;
+            line-height: 2;
+            color: #555;
+        }
+        .contact-phone-big {
+            display: block;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            color: var(--orange);
+            text-decoration: none;
+            margin: 10px 0;
+            transition: var(--transition);
+        }
+        .contact-phone-big:hover { opacity: 0.8; }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html" class="nav-logo">KOGUT <span>ROBOTY ZIEMNE</span></a>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+    <ul class="nav-links">
+        <li><a href="index.html">Główna</a></li>
+        <li><a href="o-nas.html">O nas</a></li>
+        <li><a href="uslugi.html">Usługi</a></li>
+        <li><a href="opinie.html">Opinie</a></li>
+        <li><a href="kontakt.html" class="active">Kontakt</a></li>
+    </ul>
+</nav>
+
+<div class="page-header reveal">
+    <h1>Kontakt i <span style="color: var(--orange);">Wycena</span></h1>
+    <p>Bezpłatna wycena na miejscu · Odpowiadamy szybko</p>
+</div>
+
+<section class="reveal">
+    <div class="contact-grid">
+        <!-- LEFT: Contact Info -->
+        <div>
+            <div class="contact-info-block">
+                <h3>📞 Telefon</h3>
+                <a href="tel:692598742" class="contact-phone-big">692 598 742</a>
+                <p>Najszybszy kontakt — dzwoń śmiało!</p>
+            </div>
+
+            <div class="contact-info-block">
+                <h3>📍 Adres</h3>
+                <p>Olsztyńska 10/26<br>11-500 Giżycko</p>
+            </div>
+
+            <div class="contact-info-block">
+                <h3>🕐 Godziny Otwarcia</h3>
+                <table class="hours-table">
+                    <tr>
+                        <td>Poniedziałek – Piątek</td>
+                        <td><strong>07:00 – 19:00</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Sobota</td>
+                        <td><strong>07:00 – 16:00</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Niedziela</td>
+                        <td>Zamknięte</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="contact-info-block">
+                <h3>🗺️ Zasięg</h3>
+                <p>Działamy w Giżycku i okolicach<br>w promieniu do <strong>50 km</strong>.</p>
+            </div>
+        </div>
+
+        <!-- RIGHT: Form -->
+        <form id="bookingForm" class="card" style="text-align: left;">
+            <h3 style="margin-bottom: 25px; font-size: 1.4rem; color: var(--navy);">Wyślij Zapytanie</h3>
+
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div class="form-group">
+                    <label for="name">Imię i nazwisko *</label>
+                    <input type="text" id="name" placeholder="Jan Kowalski" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefon *</label>
+                    <input type="tel" id="phone" placeholder="123 456 789" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Rodzaj usługi *</label>
+                <select id="service" required>
+                    <option value="">Wybierz usługę...</option>
+                    <option>Usługi koparką</option>
+                    <option>Dostawa czarnoziemu</option>
+                    <option>Wyrównanie terenu</option>
+                    <option>Kopanie fundamentów</option>
+                    <option>Wykopy pod instalacje</option>
+                    <option>Niwelacja działek</option>
+                    <option>Inne</option>
+                </select>
+            </div>
+
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 15px;">
+                <div class="form-group">
+                    <label for="date">Preferowana data *</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Godzina</label>
+                    <select id="time">
+                        <option>07:00 – 10:00</option>
+                        <option>10:00 – 13:00</option>
+                        <option>13:00 – 16:00</option>
+                        <option>16:00 – 19:00 (tylko Pon–Pt)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="desc">Opis zlecenia</label>
+                <textarea id="desc" rows="4" placeholder="Opisz krótko, co potrzebujesz — lokalizacja, zakres prac, inne uwagi..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-orange" style="width: 100%; border: none; cursor: pointer; font-size: 1rem; padding: 1.1rem;">
+                WYŚLIJ ZAPYTANIE →
+            </button>
+            <p style="font-size: 0.8rem; color: #888; margin-top: 12px; text-align: center;">* Pola wymagane. Oddzwonimy wkrótce!</p>
+        </form>
+    </div>
+
+    <!-- MAP -->
+    <div class="map-container reveal">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2360.2547144883196!2d21.7589!3d54.0384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e190a6e3e50555%3A0x67585a73e6704d80!2sOlszty%C5%84ska%2010%2C%2011-500%20Gi%C5%BCycko!5e0!3m2!1spl!2spl!4v1690000000000!5m2!1spl!2spl"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Lokalizacja KOGUT ROBOTY ZIEMNE Giżycko">
+        </iframe>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h3 style="color: var(--orange);">KOGUT ROBOTY ZIEMNE</h3>
+            <p>Olsztyńska 10/26<br>11-500 Giżycko</p>
+            <p>Tel: <a href="tel:692598742" style="color: var(--orange); text-decoration: none;">692 598 742</a></p>
+        </div>
+        <div>
+            <h3>GODZINY OTWARCIA</h3>
+            <p>Pon – Pt: 07:00 – 19:00<br>Sobota: 07:00 – 16:00<br>Niedziela: Zamknięte</p>
+        </div>
+        <div>
+            <h3>NAWIGACJA</h3>
+            <p>
+                <a href="index.html" style="color: white; text-decoration: none; display: block;">Główna</a>
+                <a href="o-nas.html" style="color: white; text-decoration: none; display: block;">O nas</a>
+                <a href="uslugi.html" style="color: white; text-decoration: none; display: block;">Usługi</a>
+                <a href="opinie.html" style="color: white; text-decoration: none; display: block;">Opinie</a>
+                <a href="kontakt.html" style="color: white; text-decoration: none; display: block;">Kontakt</a>
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 KOGUT ROBOTY ZIEMNE · Giżycko · Profesjonalne Roboty Ziemne
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
